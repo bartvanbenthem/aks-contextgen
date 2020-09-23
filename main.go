@@ -33,9 +33,7 @@ func main() {
 		c := strings.Split(*cluster.ID, "/")
 		resourceGroup := c[4]
 		name := c[8]
-		fmt.Printf("Creating kube context for: %-20v %v \n", name, resourceGroup)
-		// az aks get-credentials --name $name --resource-group $resourceGroup
-		// --subscription $s --admin --overwrite-existing
+		fmt.Printf("List cluster admin credentials for %v \n", name)
 		cmd := exec.Command("az",
 			"aks", "get-credentials", "--name", name,
 			"--resource-group", resourceGroup, "--subscription", subscriptionID,
