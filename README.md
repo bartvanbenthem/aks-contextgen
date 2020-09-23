@@ -23,3 +23,8 @@ $ export AZURE_SUBSCRIPTION_ID='<<subscriptionID>>'
 $ cd aks-contextgen/bin
 $ ./aks-contextgen
 ```
+
+install and run (Windows)
+``` shell
+# in development
+```
