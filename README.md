@@ -8,7 +8,8 @@ Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ## install and run (Linux)
 ``` shell
-$ git clone https://github.com/bartvanbenthem/aks-contextgen.git
 $ az login
-$ ./aks-contextgen/bin/run.sh
+$ git clone https://github.com/bartvanbenthem/aks-contextgen.git
+$ cd aks-contextgen/bin
+$ ./run.sh
 ```
