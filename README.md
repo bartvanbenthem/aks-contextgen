@@ -1,12 +1,12 @@
 # Description
 Generate kube-context containing all AKS clusters within the Azure tenant or within a specific subscription. The azure cli config is used for authentication.
 
-## prerequisites
+### prerequisites
 Install azure cli: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
-## install and run (Linux)
+### install and run (Linux)
 Create kube-context for all AKS clusters within the Azure tenant:
 ``` shell
 $ az login
@@ -24,7 +24,7 @@ $ cd aks-contextgen/bin
 $ ./aks-contextgen
 ```
 
-install and run (Windows)
+### install and run (Windows)
 ``` shell
 # in development
 ```
