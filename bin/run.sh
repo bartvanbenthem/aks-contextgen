@@ -12,7 +12,6 @@ do
     if [ $length -gt 0 ]
     then
         ./aks-contextgen
-        #az aks get-credentials --name $name --resource-group $resourceGroup --admin --overwrite-existing --subscription $s
     fi
 done
 
