@@ -14,17 +14,3 @@ $ git clone https://github.com/bartvanbenthem/aks-contextgen.git
 $ cd aks-contextgen/bin
 $ ./run.sh
 ```
-
-Create kube-context for all AKS clusters within a specific subscription:
-``` shell
-$ az login
-$ git clone https://github.com/bartvanbenthem/aks-contextgen.git
-$ export AZURE_SUBSCRIPTION_ID='<<subscriptionID>>'
-$ cd aks-contextgen/bin
-$ ./aks-contextgen
-```
-
-### install and run (Windows)
-``` shell
-# in development
-```
