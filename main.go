@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/Azure/azure-sdk-for-go/profiles/latest/containerservice/mgmt/containerservice"
+	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/azure/auth"
 )
 
@@ -45,4 +46,24 @@ func main() {
 			log.Fatalf("cmd.Run() failed with %s\n", err)
 		}
 	}
+}
+
+func resourceManagerAuthorizer() (autorest.Authorizer, error) {
+	var rmAuth autorest.Authorizer
+	var err error
+	if len(os.Getenv("AZURE_CLIENT_ID")) == 0 || len(os.Getenv("AZURE_CLIENT_SECRET")) == 0 {
+		// create an resource manager authorizer from the az cli configuration
+		rmAuth, err = auth.NewAuthorizerFromCLI()
+		if err != nil {
+			return rmAuth, err
+		}
+	} else {
+		// create an resource manager authorizer from the following environment variables
+		// AZURE_CLIENT_ID  | AZURE_CLIENT_SECRET | AZURE_TENANT_ID
+		rmAuth, err = auth.NewAuthorizerFromEnvironment()
+		if err != nil {
+			return rmAuth, err
+		}
+	}
+	return rmAuth, err
 }
