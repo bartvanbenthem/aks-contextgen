@@ -6,8 +6,9 @@ Install azure cli: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?
 
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
-### install and run (Linux)
-Create kube-context for all AKS clusters within the Azure tenant:
+### install and run (Linux or WSL)
+For Windows first configure: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
 ``` shell
 $ az login
 $ git clone https://github.com/bartvanbenthem/aks-contextgen.git
